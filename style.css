@@ -1,0 +1,292 @@
+@import url("https://use.typekit.net/pgx6xsy.css");
+
+:root {
+  --babyblue: #a4b2db;
+  --white: #f9f4f3;
+  --darkblue: #241e4e;
+
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--babyblue);
+}
+
+h1 {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: var(--white);
+}
+
+h2 {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: var(--white);
+}
+
+
+
+/* mobil versionen */
+
+@media screen and (max-width: 500px) {
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .menu-wrap {
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    z-index: 1;
+    font-family: bebas-neue, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    padding: 1rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .hamburger > div:before,
+  .menu-wrap .hamburger > div::after {
+    content:'';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+    background-color: var(--darkblue);
+  }
+
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition:  opacity 0.4s ease 0.4s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > div {
+    background: var(--white);
+    border-radius: 50%;
+    width: 150vw;
+    height: 150vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div >ul >li {
+    list-style: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 5px;
+    background-color: var(--white);
+  }
+
+  .menu-wrap .menu > div > div >ul >li >a {
+    color: var(--darkblue);
+    text-decoration: none;
+    transition: color 0.4s ease;
+    background-color: var(--white);
+  }
+
+  #logoimg {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+  }
+
+  .forsidepose {
+    width: 78%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: transparent;
+  }
+
+  #p1 {
+    margin: 42px;
+    padding: 30px;
+    border-left: 6px solid var(--white);
+    font-size: 20px;
+    color: var(--white);
+    text-align: justify;
+    font-family: bebas-neue, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .design_hojre_venstre img{
+    width: 35%;
+    margin-left: 45px;
+    display: inline-block;
+  }
+
+  form {
+    width: 600px;
+    display: inline-block;
+    background-color: transparent;
+    float: right;
+    margin-right: 35px;
+    }
+
+  input[type=text], input[type=submit] {
+    width: 30%%;
+    padding: 8px;
+    margin-top: 10px;
+    border: none;
+    background-color: white;
+    font-family: bebas-neue, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: var(--white);
+    opacity: 0.8;
+    float: right;
+    margin-right: 20px;
+    background-color: transparent;
+  }
+
+  input[type=submit] {
+    background-color: var(--darkblue);
+    color: var(--white);
+    border: none;
+    opacity: 1.2;
+  }
+
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
+
+  .containeret {
+    background-color: transparent;
+    padding: 5px;
+  }
+
+  .containeret h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 205px;
+  }
+
+  .containeret h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 205px;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .some img {
+    width: 20px;
+  }
+
+  .some h2 {
+    font-family: bebas-neue, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    margin-bottom: 0;
+    background-color: transparent;
+    padding-bottom: 0;
+    color: var(--white);
+  }
+
+  .somebillede {
+    padding-top: 10px;
+    background-color: #839abe;
+  }
+
+  .somebillede img {
+    width: 180px;
+    background-color: #839abe;
+    margin-left: -10px;
+  }
