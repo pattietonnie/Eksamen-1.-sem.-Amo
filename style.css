@@ -13,7 +13,8 @@
   --teksturmobil: url('../images/teksturmobil.png');
   --franskbroed: url('../images/franskbroedmobil.png');
   --hvede: url('../images/hvedemobil.png');
-  --computer: url('../images/amocomputer.png')
+  --computer: url('../images/amocomputer.png');
+  --broed: url('../images/broed.png')
 }
 
 * {
@@ -48,6 +49,50 @@ p {
   font-weight: 200;
   font-style: normal;
   color: var(--white);
+}
+
+.button {
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  /* Spacing */
+  padding: 8px;
+
+  border: none;
+
+  display: inline-block;
+
+  background-color: transparent;
+  }
+
+.button__arrow {
+/* Transparent background */
+background-color: transparent;
+/* Size */
+height: 16px;
+width: 16px;
+}
+
+.button__arrow:hover {
+  opacity: 0.5;
+}
+
+.button__arrow--right {
+/* Edges */
+border-right: 4px solid var(--darkblue);
+border-top: 4px solid var(--darkblue);
+transform: translateX(-25%) rotate(45deg);
+
+}
+
+.button__arrow--left {
+/* Edges */
+border-bottom: 4px solid var(--darkblue);
+border-left: 4px solid var(--darkblue);
+transform: translateX(25%) rotate(45deg);
+
 }
 
 /* mobil versionen */
@@ -397,15 +442,71 @@ p {
     background-image: var(--computer);
     background-size: 100% auto;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 420px;
+    padding: 10px;
   }
 
   .computer h1 {
     background-color: transparent;
     color: var(--darkblue);
+    text-align: center;
+    font-size: 90px;
+    padding: 0;
+    margin-top: -20px;
+
   }
 
   .computer h2 {
     background-color: transparent;
     color: var(--darkblue);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 70px;
   }
+
+  .hashtag h1 {
+    text-align: center;
+    margin-top: -20px;
+    letter-spacing: 3px;
+  }
+
+  .insta {
+    background-image: var(--broed);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .hvidbox {
+    width: 80%;
+    height: 420px;
+    margin: 38px;
+    background-color: var(--white);
+  }
+
+  .button {
+
+  }
+
+  .button__arrow {
+    /* Transparent background */
+    background-color: transparent;
+
+    /* Size */
+    height: 16px;
+    width: 16px;
+
+    display: inline-block;
+    }
+
+  .button__arrow--right {
+    /* Edges */
+    float: right;
+    }
+
+  .button__arrow--left {
+    /* Edges */
+
+    }
+
+    
