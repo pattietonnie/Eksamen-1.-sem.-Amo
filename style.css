@@ -4,8 +4,16 @@
   --babyblue: #a4b2db;
   --white: #f9f4f3;
   --darkblue: #241e4e;
+  --brown: #d4c6a9;
+  --darkbrown: #82735c;
+  --graa: #b5b5b5;
 
   --menu-speed: 0.75s;
+
+  --teksturmobil: url('../images/teksturmobil.png');
+  --franskbroed: url('../images/franskbroedmobil.png');
+  --hvede: url('../images/hvedemobil.png');
+  --computer: url('../images/amocomputer.png')
 }
 
 * {
@@ -16,19 +24,31 @@
 
 h1 {
   font-family: bebas-neue, sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-style: normal;
   color: var(--white);
 }
 
 h2 {
   font-family: bebas-neue, sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-style: normal;
   color: var(--white);
 }
 
+h3 {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white);
+}
 
+p {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: var(--white);
+}
 
 /* mobil versionen */
 
@@ -42,6 +62,20 @@ h2 {
     font-size: 30px;
   }
 
+  h3 {
+  font-size: 40px;
+  }
+
+  #baggrund_tekstur {
+    background-color: transparent;
+    background-image: var(--teksturmobil);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+
+/*burgermenu start*/
   .menu-wrap {
     position: fixed;
     top: 20px;
@@ -175,14 +209,41 @@ h2 {
     text-decoration: none;
     transition: color 0.4s ease;
     background-color: var(--white);
+    font-size: 40px;
   }
+/*burgermenu slut*/
 
   #logoimg {
     width: 100px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
+    margin-top: 10px;
+  }
+
+  .forsideposebaggrund {
+    background-color: transparent;
+  }
+
+  .nyt_design {
+    background-color: transparent;
+    background-image: var(--franskbroed);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 475px;
+  }
+
+  .nyt_design h1 {
+    margin-left: 11%;
+    margin-right: auto;
+    margin-top: -10px;
+    padding: 20px;
+    font-size: 35px;
+    background-color: transparent;
+  }
+
+  .nyt_design #franskbroed {
+    background-color: transparent;
   }
 
   .forsidepose {
@@ -190,50 +251,109 @@ h2 {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    background-color: transparent;
+    border: 1px solid var(--graa);
   }
 
   #p1 {
-    margin: 42px;
+    margin-left: 40px;
+    margin-right: 8px;
+    margin-top: 35px;
+
     padding: 30px;
     border-left: 6px solid var(--white);
-    font-size: 20px;
+    font-size: 22px;
     color: var(--white);
     text-align: justify;
-    font-family: bebas-neue, sans-serif;
-    font-weight: 200;
-    font-style: normal;
+  }
+
+  .design_hojre_venstre {
+    background-color: transparent;
+    background-image: var(--hvede);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 425px;
   }
 
   .design_hojre_venstre img{
     width: 35%;
-    margin-left: 45px;
+    margin-left: 9%;
+    margin-top: 30%;
     display: inline-block;
+    border: 0.5px solid var(--graa);
+  }
+
+  .brunbox h3 {
+    background-color: var(--brown);
+    margin: 35px;
+    padding: 15px;
+    text-align: justify;
+    color: var(--darkbrown);
+    border: 1px solid var(--graa);
+  }
+
+  #p2 {
+    margin-left: 8px;
+    margin-right: 40px;
+    margin-top: 45px;
+    padding: 30px;
+    border-right: 6px solid var(--white);
+    font-size: 22px;
+    color: var(--white);
+    text-align: justify;
   }
 
   form {
-    width: 600px;
-    display: inline-block;
+    width: 100%;
+    display: block;
     background-color: transparent;
-    float: right;
-    margin-right: 35px;
+    background-image: var(--teksturmobil);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 225px;
+    margin-top: 35px;
     }
 
+  .containeret {
+    background-color: transparent;
+    padding: 5px;
+    overflow-x: hidden;
+  }
+
+  .containeret h1 {
+    margin-top: 28px;
+    text-align: center;
+    margin-left: 2%;
+    background-color: transparent;
+  }
+
+  .containeret h2 {
+    background-color: transparent;
+    text-align: center;
+    margin-left: 35%;
+    position: absolute;
+  }
+
   input[type=text], input[type=submit] {
-    width: 30%%;
-    padding: 8px;
-    margin-top: 10px;
-    border: none;
-    background-color: white;
+    width: 80%;
     font-family: bebas-neue, sans-serif;
     font-weight: 200;
     font-style: normal;
     color: var(--white);
     opacity: 0.8;
-    float: right;
-    margin-right: 20px;
     background-color: transparent;
+    margin-left: 37px;
+    margin-right: 37px;
+  }
+
+  input[type=text] {
+    border-bottom: 5px solid var(--darkblue);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 15px;
+    font-size: 16px;
+    width: 72%;
+    margin-top: 15px;
   }
 
   input[type=submit] {
@@ -241,52 +361,51 @@ h2 {
     color: var(--white);
     border: none;
     opacity: 1.2;
+    font-size: 20px;
+    padding: 12px;
   }
 
   input[type=submit]:hover {
     opacity: 0.8;
   }
 
-  .containeret {
-    background-color: transparent;
-    padding: 5px;
-  }
-
-  .containeret h1 {
-    margin-top: 20px;
+  .some {
+    margin-left: 26%;
     margin-bottom: 20px;
-    margin-left: 205px;
+    justify-content: center;
   }
 
-  .containeret h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 205px;
-    background-color: transparent;
-    text-align: center;
-  }
-
-  .some img {
-    width: 20px;
-  }
-
-  .some h2 {
+  .some h1 {
     font-family: bebas-neue, sans-serif;
     font-weight: 200;
     font-style: normal;
-    margin-bottom: 0;
     background-color: transparent;
-    padding-bottom: 0;
     color: var(--white);
-  }
-
-  .somebillede {
-    padding-top: 10px;
-    background-color: #839abe;
+    margin-left: 11.5%;
+    padding: 10px;
   }
 
   .somebillede img {
-    width: 180px;
-    background-color: #839abe;
-    margin-left: -10px;
+    width: 20%;
+    padding: 15px;
+  }
+
+  /*      konkurrence.html      */
+
+  .computer {
+    background-color: transparent;
+    background-image: var(--computer);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 600px;
+  }
+
+  .computer h1 {
+    background-color: transparent;
+    color: var(--darkblue);
+  }
+
+  .computer h2 {
+    background-color: transparent;
+    color: var(--darkblue);
   }
