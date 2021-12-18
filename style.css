@@ -14,7 +14,12 @@
   --franskbroed: url('../images/franskbroedmobil.png');
   --hvede: url('../images/hvedemobil.png');
   --computer: url('../images/amocomputer.png');
-  --broed: url('../images/broed.png')
+  --broed: url('../images/broed.png');
+  --fbvertikal: url('../images/fbvertikal.png');
+  --hvedevertikal: url('../images/hvedevertikal.png');
+  --vbmobil: url('../images/vbmobil.png');
+  --focaccia: url('../images/focacciamobil.png');
+  --fdej: url('../images/fdejmobil.png');
 }
 
 * {
@@ -51,74 +56,12 @@ p {
   color: var(--white);
 }
 
-.button {
-  /* Center the content */
-  align-items: center;
-  display: flex;
-  justify-content: center;
-
-  /* Spacing */
-  padding: 8px;
-
-  border: none;
-
-  display: inline-block;
-
-  background-color: transparent;
-  }
-
-.button__arrow {
-/* Transparent background */
-background-color: transparent;
-/* Size */
-height: 16px;
-width: 16px;
+button {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: var(--white);
 }
-
-.button__arrow:hover {
-  opacity: 0.5;
-}
-
-.button__arrow--right {
-/* Edges */
-border-right: 4px solid var(--darkblue);
-border-top: 4px solid var(--darkblue);
-transform: translateX(-25%) rotate(45deg);
-
-}
-
-.button__arrow--left {
-/* Edges */
-border-bottom: 4px solid var(--darkblue);
-border-left: 4px solid var(--darkblue);
-transform: translateX(25%) rotate(45deg);
-
-}
-
-/* mobil versionen */
-
-@media screen and (max-width: 500px) {
-
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 30px;
-  }
-
-  h3 {
-  font-size: 40px;
-  }
-
-  #baggrund_tekstur {
-    background-color: transparent;
-    background-image: var(--teksturmobil);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-
 
 /*burgermenu start*/
   .menu-wrap {
@@ -137,8 +80,6 @@ transform: translateX(25%) rotate(45deg);
     left: 0;
     z-index: 2;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
     opacity: 0;
   }
 
@@ -147,8 +88,6 @@ transform: translateX(25%) rotate(45deg);
     top: 0;
     left: 0;
     z-index: 1;
-    width: 30px;
-    height: 30px;
     padding: 1rem;
     background-color: transparent;
     display: flex;
@@ -258,255 +197,875 @@ transform: translateX(25%) rotate(45deg);
   }
 /*burgermenu slut*/
 
-  #logoimg {
-    width: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
+#logoimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.forsideposebaggrund {
+  background-color: transparent;
+}
+
+.nyt_design {
+  background-color: transparent;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.nytdesign h1 {
+  background-color: transparent;
+}
+
+#forsidepose {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--graa);
+}
+
+#p1 {
+  border-left: 6px solid var(--white);
+  color: var(--white);
+  text-align: justify;
+}
+
+.design_hojre_venstre {
+  background-color: transparent;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.design_hojre_venstre img {
+  display: inline-block;
+  border: 0.5px solid var(--graa);
+}
+
+.brunbox h3 {
+  background-color: var(--brown);
+  text-align: justify;
+  color: var(--darkbrown);
+  border: 1px solid var(--graa);
+}
+
+#p2 {
+  border-right: 6px solid var(--white);
+  color: var(--white);
+  text-align: justify;
+}
+
+form {
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.containeret {
+  background-color: transparent;
+}
+
+.containeret h1 {
+  text-align: center;
+  background-color: transparent;
+}
+
+.containeret h2 {
+  position: absolute;
+  text-align: center;
+  background-color: transparent;
+}
+
+input[type=text], input[type=submit] {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: var(--white);
+  opacity: 0.8;
+  background-color: transparent;
+}
+
+input[type=text] {
+  border-bottom: 5px solid var(--darkblue);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+input[type=submit] {
+  background-color: var(--darkblue);
+  color: var(--white);
+  border: none;
+  opacity: 1.2;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.some {
+  justify-content: center;
+}
+
+.some h1 {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  background-color: transparent;
+  color: var(--white);
+}
+
+/* KONKURRENCE .html */
+
+.computer {
+  background-color: transparent;
+  background-image: var(--computer);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.computer h1 {
+  background-color: transparent;
+  color: var(--darkblue);
+  text-align: center;
+}
+
+.computer h2 {
+  background-color: transparent;
+  color: var(--darkblue);
+  text-align: center;
+}
+
+.hashtag h1 {
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.insta {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.hvidbox {
+  background-color: var(--white);
+}
+
+.hvidbox img {
+  background-color: var(--white);
+  opacity: 0.7;
+}
+
+.hvidbox h2 {
+  text-align: center;
+  color: var(--darkblue);
+  background-color: transparent;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 60%;
+  background: var(--white);
+  border-radius: 2px;
+  margin: 0;
+}
+
+form.example {
+  background-image: var(--hvede);
+  background-size: 0px;
+  margin-left: 13%;
+  margin-top: 0;
+  height: 50px;
+}
+
+form.example button {
+  float: left;
+  width: 40px;
+  padding: 10px;
+  background: var(--darkblue);
+  color: var(--white);
+  font-size: 17px;
+  border: 1px solid grey;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+form.example button:hover {
+  background: var(--darkblue);
+  opacity: 0.7;
+  border: none;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+button i {
+  background-color: transparent;
+}
+
+.overskrift {
+  text-align: center;
+}
+
+
+
+/* mobil versionen */
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 50px;
   }
 
-  .forsideposebaggrund {
-    background-color: transparent;
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+  font-size: 40px;
+  }
+
+  .menu-wrap {
+    display: flex;
+  }
+
+  .menu-wrap .toggler {
+    width: 30px;
+    height: 30px;
+  }
+
+  .menu-wrap .hamburger {
+    width: 30px;
+    height: 30px;
+  }
+
+  #logoimg {
+    width: 100px;
   }
 
   .nyt_design {
-    background-color: transparent;
     background-image: var(--franskbroed);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    height: 475px;
+    height: 450px;
   }
 
-  .nyt_design h1 {
-    margin-left: 11%;
-    margin-right: auto;
+  .nytdesign h1 {
     margin-top: -10px;
     padding: 20px;
-    font-size: 35px;
-    background-color: transparent;
+    text-align: center;
+    background-size: 100% auto;
+    background-repeat: none;
   }
 
-  .nyt_design #franskbroed {
-    background-color: transparent;
-  }
-
-  .forsidepose {
+  #forsidepose {
     width: 78%;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid var(--graa);
   }
 
   #p1 {
     margin-left: 40px;
     margin-right: 8px;
     margin-top: 35px;
-
     padding: 30px;
-    border-left: 6px solid var(--white);
     font-size: 22px;
-    color: var(--white);
-    text-align: justify;
   }
 
   .design_hojre_venstre {
-    background-color: transparent;
     background-image: var(--hvede);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
     height: 425px;
   }
 
-  .design_hojre_venstre img{
+  .design_hojre_venstre img {
     width: 35%;
     margin-left: 9%;
     margin-top: 30%;
-    display: inline-block;
-    border: 0.5px solid var(--graa);
+  }
+
+  .brunbox {
+    height: 400px;
   }
 
   .brunbox h3 {
-    background-color: var(--brown);
-    margin: 35px;
+    margin-left: 35px;
+    margin-right: 35px;
     padding: 15px;
-    text-align: justify;
-    color: var(--darkbrown);
-    border: 1px solid var(--graa);
   }
 
   #p2 {
     margin-left: 8px;
     margin-right: 40px;
     margin-top: 45px;
+    margin-bottom: 80px;
     padding: 30px;
-    border-right: 6px solid var(--white);
     font-size: 22px;
-    color: var(--white);
-    text-align: justify;
   }
 
   form {
-    width: 100%;
-    display: block;
-    background-color: transparent;
-    background-image: var(--teksturmobil);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
     height: 225px;
     margin-top: 35px;
+    background-image: var(--teksturmobil);
     }
 
   .containeret {
-    background-color: transparent;
     padding: 5px;
     overflow-x: hidden;
   }
 
   .containeret h1 {
     margin-top: 28px;
-    text-align: center;
     margin-left: 2%;
-    background-color: transparent;
   }
 
   .containeret h2 {
     background-color: transparent;
     text-align: center;
     margin-left: 35%;
-    position: absolute;
   }
 
   input[type=text], input[type=submit] {
     width: 80%;
-    font-family: bebas-neue, sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    color: var(--white);
-    opacity: 0.8;
-    background-color: transparent;
     margin-left: 37px;
     margin-right: 37px;
+    border-bottom: 5px solid var(--darkblue);
   }
 
   input[type=text] {
-    border-bottom: 5px solid var(--darkblue);
-    border-top: none;
-    border-left: none;
-    border-right: none;
     padding: 15px;
-    font-size: 16px;
+    font-size: 20px;
     width: 72%;
     margin-top: 15px;
   }
 
   input[type=submit] {
-    background-color: var(--darkblue);
-    color: var(--white);
-    border: none;
-    opacity: 1.2;
-    font-size: 20px;
+    font-size: 25px;
     padding: 12px;
-  }
-
-  input[type=submit]:hover {
-    opacity: 0.8;
+    margin-top: 15px;
   }
 
   .some {
-    margin-left: 26%;
     margin-bottom: 20px;
-    justify-content: center;
+    text-align: center;
   }
 
   .some h1 {
-    font-family: bebas-neue, sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    background-color: transparent;
-    color: var(--white);
-    margin-left: 11.5%;
-    padding: 10px;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-bottom: 10px;
   }
 
   .somebillede img {
-    width: 20%;
-    padding: 15px;
+    width: 15%;
+    padding: 5px;
   }
 
   /*      konkurrence.html      */
 
   .computer {
-    background-color: transparent;
-    background-image: var(--computer);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
     height: 420px;
     padding: 10px;
   }
 
   .computer h1 {
-    background-color: transparent;
-    color: var(--darkblue);
-    text-align: center;
     font-size: 90px;
     padding: 0;
     margin-top: -20px;
-
   }
 
   .computer h2 {
-    background-color: transparent;
-    color: var(--darkblue);
-    text-align: center;
     padding: 0;
     margin: 0;
     font-size: 70px;
   }
 
   .hashtag h1 {
-    text-align: center;
     margin-top: -20px;
-    letter-spacing: 3px;
   }
 
   .insta {
     background-image: var(--broed);
-    background-size: 100%;
-    background-repeat: no-repeat;
   }
 
   .hvidbox {
     width: 80%;
     height: 420px;
     margin: 38px;
-    background-color: var(--white);
+  }
+
+  .hvidbox img {
+    width: 85%;
+    padding: 23px;
+  }
+
+  .hvidbox h2 {
+    font-size: 25px;
+    margin-top: 20px;
   }
 
   .button {
-
+    position: absolute;
   }
 
   .button__arrow {
-    /* Transparent background */
     background-color: transparent;
-
-    /* Size */
     height: 16px;
     width: 16px;
-
     display: inline-block;
+  }
+
+  /*pile konkurrence start*/
+  .button {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* Spacing */
+    padding: 8px;
+    border: none;
+    display: inline-block;
+    background-color: transparent;
     }
+
+  .button__arrow {
+  /* Transparent background */
+    background-color: transparent;
+  /* Size */
+    height: 16px;
+    width: 16px;
+    margin-top: 200px;
+  }
+
+  .button__arrow:hover {
+    opacity: 0.5;
+  }
 
   .button__arrow--right {
-    /* Edges */
-    float: right;
-    }
+  /* Edges */
+    border-right: 4px solid var(--darkblue);
+    border-top: 4px solid var(--darkblue);
+    transform: translateX(-25%) rotate(45deg);
+    margin-left: 340px;
+  }
 
   .button__arrow--left {
-    /* Edges */
+  /* Edges */
+    border-bottom: 4px solid var(--darkblue);
+    border-left: 4px solid var(--darkblue);
+    transform: translateX(25%) rotate(45deg);
+  }
 
+  /* opskrift-html */
+
+  .overskrift {
+    margin: 10px;
+  }
+
+  .overskrift h1 {
+    letter-spacing: 3px;
+    font-size: 50px;
+    padding: 10px;
+    margin-top: -10px;
+  }
+
+  .overskrift p {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .opskrifter {
+    background-image: var(--vbmobil);
+  }
+
+  .opskrifter h1 {
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+
+  .hvidboxto {
+    margin-left: 45px;
+    margin-right: 45px;
+    width: 280px;
+    background-color: var(--white);
+  }
+
+  .focaccia_image {
+    background-color: var(--white);
+    padding: 20px;
+  }
+
+  .focaccia_image img{
+    width: 242px;
+    background-color: var(--white);
+    opacity: 0.9;
+  }
+
+  .grillet_focaccia {
+    background-color: var(--white);
+    margin-top: 5px;
+  }
+
+  .grillet_focaccia h1 {
+    font-size: 30px;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--darkblue);
+  }
+
+  .grillet_focaccia p {
+    text-align: center;
+    background-color: var(--white);
+    color: var(--darkblue);
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+  }
+
+  .grillet_focaccia button {
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    background-color: var(--darkblue);
+  }
+
+  /* focaccia.html */
+  .grilletfocaccia h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .ingredienser {
+    background-image: var(--focaccia);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
+  .ingredienser h2 {
+    text-align: center;
+    background-color: transparent;
+    padding-top: 42px;
+  }
+
+  .ingredienser h3 {
+    text-align: center;
+    background-color: transparent;
+    font-size: 25px;
+  }
+
+  .ingredienser p {
+    text-align: left;
+    background-color: transparent;
+    margin-left: 65px;
+    font-size: 18px;
+    padding-top: 16px;
+    padding-bottom: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .saadangordu h2 {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .saadan_gor_du {
+    background-image: var(--fdej);
+  }
+
+  .saadan_gor_du p {
+    background-color: transparent;
+    margin-left: 40px;
+    margin-right: 40px;
+    letter-spacing: 0.5px;
+  }
+}
+
+
+/* vertikal */
+  @media screen and (min-width: 811px) {
+    h1 {
+      font-size: 60px;
     }
 
-    
+    h2 {
+      font-size: 50px;
+    }
+
+    h3 {
+    font-size: 60px;
+    }
+
+    .menu-wrap {
+      display: flex;
+    }
+
+    .menu-wrap .toggler {
+      width: 30px;
+      height: 30px;
+    }
+
+    .menu-wrap .hamburger {
+      width: 30px;
+      height: 30px;
+    }
+
+    #logoimg {
+      width: 100px;
+    }
+
+    .nyt_design {
+      background-image: var(--fbvertikal);
+      height: 475px;
+    }
+
+    .nytdesign h1 {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .nyt_design {
+      background-color: transparent;
+    }
+
+    #forsidepose {
+      width: 310px;
+      float: left;
+      margin-left: 45px;
+      margin-top: 15px;
+    }
+
+    #p1 {
+      width: 40%;
+      margin-left: 40px;
+      margin-right: 8px;
+      margin-top: -285px;
+      padding: 30px;
+      font-size: 22px;
+      float: right;
+      background-color: transparent;
+    }
+
+    #p1 p {
+      background-color: transparent;
+    }
+
+    .design_hojre_venstre {
+      height: 425px;
+    }
+
+    .design_hojre_venstre img  {
+      width: 35%;
+      margin-left: 9%;
+      margin-top: 60px;
+    }
+
+    .box {
+      background-image: var(--hvedevertikal);
+      background-color: transparent;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+
+    .brunbox {
+      height: 850px;
+    }
+
+    .brunbox h3 {
+      margin-left: 40px;
+      margin-right: 35px;
+      margin-top: -320px;
+      padding: 15px;
+      width: 285px;
+      font-size: 40px;
+    }
+
+
+    #p2 {
+      width: 40%;
+      margin-left: 40px;
+      margin-right: 8px;
+      margin-top: -300px;
+      padding: 30px;
+      font-size: 22px;
+      float: right;
+      background-color: transparent;
+      border-left: 6px solid var(--white);
+      border-right: none;
+    }
+
+    #p2 p {
+      background-color: transparent;
+    }
+
+    #billedeto {
+      margin-top: 30px;
+    }
+
+    form {
+      background-image: var(--teksturmobil);
+      height: 525px;
+      margin-top: 35px;
+      }
+
+    .containeret {
+      padding: 5px;
+      overflow-x: hidden;
+    }
+
+    .containeret h1 {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .containeret h2 {
+      background-color: transparent;
+      text-align: center;
+      margin-left: 310px;
+    }
+
+    input[type=text], input[type=submit] {
+      width: 90%;
+      margin-left: 37px;
+      margin-right: 37px;
+      margin-top: 18px;
+    }
+
+    input[type=text] {
+      padding: 15px;
+      font-size: 26px;
+      width: 86.3%;
+      margin-top: 15px;
+    }
+
+    input[type=submit] {
+      font-size: 20px;
+      padding: 12px;
+    }
+
+    .some {
+      margin-left: 32%;
+      margin-bottom: 20px;
+      margin-top: -200px;
+      background-color: transparent;
+    }
+
+    .some h1 {
+      margin-left: 11.5%;
+      padding: 10px;
+    }
+
+    .somebillede img {
+      width: 20%;
+      padding: 15px;
+    }
+
+    /*      konkurrence.html      */
+
+    .computer {
+      height: 420px;
+      padding: 10px;
+    }
+
+    .computer h1 {
+      font-size: 90px;
+      padding: 0;
+      margin-top: -20px;
+    }
+
+    .computer h2 {
+      padding: 0;
+      margin: 0;
+      font-size: 70px;
+    }
+
+    .hashtag h1 {
+      margin-top: -20px;
+    }
+
+    .insta {
+      background-image: var(--broed);
+    }
+
+    .hvidbox {
+      width: 80%;
+      height: 420px;
+      margin: 38px;
+    }
+
+    .hvidbox img {
+      width: 85%;
+      padding: 23px;
+    }
+
+    .hvidbox h2 {
+      font-size: 25px;
+      margin-top: 20px;
+    }
+
+    .button {
+      position: absolute;
+    }
+
+    .button__arrow {
+      background-color: transparent;
+      height: 16px;
+      width: 16px;
+      display: inline-block;
+    }
+
+    .button__arrow--left {
+      /* Edges */
+      float: right;
+    }
+
+    /*pile konkurrence start*/
+    .button {
+      /* Center the content */
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      /* Spacing */
+      padding: 8px;
+      border: none;
+      display: inline-block;
+      background-color: transparent;
+      }
+
+    .button__arrow {
+    /* Transparent background */
+      background-color: transparent;
+    /* Size */
+      height: 16px;
+      width: 16px;
+    }
+
+    .button__arrow:hover {
+      opacity: 0.5;
+    }
+
+    .button__arrow--right {
+    /* Edges */
+      border-right: 4px solid var(--darkblue);
+      border-top: 4px solid var(--darkblue);
+      transform: translateX(-25%) rotate(45deg);
+    }
+
+    .button__arrow--left {
+    /* Edges */
+      border-bottom: 4px solid var(--darkblue);
+      border-left: 4px solid var(--darkblue);
+      transform: translateX(25%) rotate(45deg);
+    }
+
+  }
+
+  @media screen and (min-width: 1011px) {
+
+  }
