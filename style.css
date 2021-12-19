@@ -4,9 +4,8 @@
   --babyblue: #a4b2db;
   --white: #f9f4f3;
   --darkblue: #241e4e;
-  --brown: #d4c6a9;
-  --darkbrown: #82735c;
   --graa: #b5b5b5;
+  --mediumblaa: #646893;
 
   --menu-speed: 0.75s;
 
@@ -20,6 +19,9 @@
   --vbmobil: url('../images/vbmobil.png');
   --focaccia: url('../images/focacciamobil.png');
   --fdej: url('../images/fdejmobil.png');
+  --fbpc: url('../images/franskbroedpc.png');
+  --hvedepc: url('../images/hvedepc.png');
+  --teksturpc: url('../images/teksturpc.png');
 }
 
 * {
@@ -93,6 +95,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: var(--teksturmobil);
   }
 
   .menu-wrap .hamburger > div {
@@ -226,7 +229,7 @@ button {
 }
 
 #p1 {
-  border-left: 6px solid var(--white);
+  border-left: 6px solid var(--mediumblaa);
   color: var(--white);
   text-align: justify;
 }
@@ -243,14 +246,14 @@ button {
 }
 
 .brunbox h3 {
-  background-color: var(--brown);
+  background-color: var(--mediumblaa);
   text-align: justify;
-  color: var(--darkbrown);
+  color: var(--white);
   border: 1px solid var(--graa);
 }
 
 #p2 {
-  border-right: 6px solid var(--white);
+  border-right: 6px solid var(--mediumblaa);
   color: var(--white);
   text-align: justify;
 }
@@ -289,6 +292,7 @@ input[type=text], input[type=submit] {
 
 input[type=text] {
   border-bottom: 5px solid var(--darkblue);
+  opacity: 0.7;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -299,6 +303,7 @@ input[type=submit] {
   color: var(--white);
   border: none;
   opacity: 1.2;
+  border-radius: 3px;
 }
 
 input[type=submit]:hover {
@@ -350,6 +355,7 @@ input[type=submit]:hover {
 
 .hvidbox {
   background-color: var(--white);
+  border-radius: 3px;
 }
 
 .hvidbox img {
@@ -372,6 +378,7 @@ form.example input[type=text] {
   background: var(--white);
   border-radius: 2px;
   margin: 0;
+  color: var(--darkblue);
 }
 
 form.example {
@@ -494,6 +501,7 @@ button i {
     margin-left: 35px;
     margin-right: 35px;
     padding: 15px;
+    border-radius: 4px;
   }
 
   #p2 {
@@ -503,6 +511,10 @@ button i {
     margin-bottom: 80px;
     padding: 30px;
     font-size: 22px;
+  }
+
+  #p2 p a {
+    color: var(--darkblue);
   }
 
   form {
@@ -517,14 +529,16 @@ button i {
   }
 
   .containeret h1 {
-    margin-top: 28px;
+    margin-top: 40px;
     margin-left: 2%;
+    padding: 15px;
   }
 
   .containeret h2 {
     background-color: transparent;
     text-align: center;
     margin-left: 35%;
+    padding: 0;
   }
 
   input[type=text], input[type=submit] {
@@ -554,8 +568,9 @@ button i {
 
   .some h1 {
     padding-top: 20px;
-    margin-top: 20px;
+    margin-top: 60px;
     padding-bottom: 10px;
+    font-size: 40px;
   }
 
   .somebillede img {
@@ -566,7 +581,7 @@ button i {
   /*      konkurrence.html      */
 
   .computer {
-    height: 420px;
+    height: 520px;
     padding: 10px;
   }
 
@@ -648,7 +663,7 @@ button i {
     border-right: 4px solid var(--darkblue);
     border-top: 4px solid var(--darkblue);
     transform: translateX(-25%) rotate(45deg);
-    margin-left: 340px;
+    margin-left: 370px;
   }
 
   .button__arrow--left {
@@ -658,7 +673,7 @@ button i {
     transform: translateX(25%) rotate(45deg);
   }
 
-  /* opskrift-html */
+  /* opskrift.html */
 
   .overskrift {
     margin: 10px;
@@ -678,6 +693,7 @@ button i {
 
   .opskrifter {
     background-image: var(--vbmobil);
+    width: 100%;
   }
 
   .opskrifter h1 {
@@ -777,6 +793,8 @@ button i {
 
   .saadan_gor_du {
     background-image: var(--fdej);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
   }
 
   .saadan_gor_du p {
@@ -784,6 +802,7 @@ button i {
     margin-left: 40px;
     margin-right: 40px;
     letter-spacing: 0.5px;
+    padding: 23px;
   }
 }
 
@@ -1067,5 +1086,278 @@ button i {
   }
 
   @media screen and (min-width: 1011px) {
+
+      .menu-wrap {
+        position: fixed;
+        top: 45px;
+        left: 65px;
+        z-index: 1;
+        font-family: bebas-neue, sans-serif;
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      .menu-wrap .toggler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        cursor: pointer;
+        opacity: 0;
+      }
+
+      .menu-wrap .hamburger {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding: 1rem;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #logoimg {
+        width: 200px;
+        background-color: transparent;
+      }
+
+      .nyt_design {
+        background-image: var(--fbpc);
+        height: 775px;
+        width: 100%;
+        background-color: transparent;
+      }
+
+      .nytdesign h1 {
+        margin: 20px;
+        text-align: center;
+      }
+
+      #forsidepose {
+        width: 600px;
+        float: left;
+        margin-left: 85px;
+        margin-top: 15px;
+      }
+
+      #p1 {
+        width: 38%;
+        margin-right: 60px;
+        margin-top: -625px;
+        padding: 30px;
+        font-size: 45px;
+        float: right;
+        background-color: transparent;
+      }
+
+      #p1 p {
+        background-color: transparent;
+      }
+
+      .design_hojre_venstre {
+        height: 425px;
+      }
+
+      .design_hojre_venstre img  {
+        width: 600px;
+        margin-left: 65px;
+        margin-top: 60px;
+      }
+
+      .box {
+        background-image: var(--hvedepc);
+        background-color: transparent;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+
+      }
+
+      .brunbox h3 {
+        margin-left: 85px;
+        margin-top: -280px;
+        padding: 25px;
+        width: 520px;
+        font-size: 70px;
+        text-align: left;
+      }
+
+
+      #p2 {
+        width: 38%;
+        margin-right: 60px;
+        margin-top: -20px;
+        padding: 30px;
+        font-size: 45px;
+        float: right;
+        border-left: 6px solid var(--white);
+        border-right: none;
+      }
+
+      #p2 p {
+        background-color: transparent;
+      }
+
+      #billedeto {
+        margin-top: 30px;
+      }
+
+      form {
+        background-image: var(--teksturpc);
+        height: 445px;
+        margin-top: 660px;
+        }
+
+      .containeret {
+        padding: 5px;
+        overflow-x: hidden;
+      }
+
+      .containeret h1 {
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .containeret h2 {
+        background-color: transparent;
+        text-align: center;
+        margin-left: 43%;
+      }
+
+      input[type=text], input[type=submit] {
+        width: 30%;
+        margin-left: 35%;
+        margin-right: 35%;
+        margin-top: 18px;
+      }
+
+      input[type=text] {
+        padding: 15px;
+        font-size: 26px;
+        width: 27.8%;
+        margin-top: 15px;
+      }
+
+      input[type=submit] {
+        font-size: 20px;
+        padding: 12px;
+      }
+
+      .some {
+        margin-top: -160px;
+        background-color: transparent;
+        margin-left: 610px;
+      }
+
+      .some h1 {
+        background-color: transparent;
+        text-align: center;
+        margin-left: -610px;
+      }
+
+      .somebillede img {
+        width: 10%;
+        padding: 15px;
+        background-color: transparent;
+      }
+
+      /*      konkurrence.html      */
+
+      .computer {
+        height: 420px;
+        padding: 10px;
+      }
+
+      .computer h1 {
+        font-size: 90px;
+        padding: 0;
+        margin-top: -20px;
+      }
+
+      .computer h2 {
+        padding: 0;
+        margin: 0;
+        font-size: 70px;
+      }
+
+      .hashtag h1 {
+        margin-top: -20px;
+      }
+
+      .insta {
+        background-image: var(--broed);
+      }
+
+      .hvidbox {
+        width: 80%;
+        height: 420px;
+        margin: 38px;
+      }
+
+      .hvidbox img {
+        width: 85%;
+        padding: 23px;
+      }
+
+      .hvidbox h2 {
+        font-size: 25px;
+        margin-top: 20px;
+      }
+
+      .button {
+        position: absolute;
+      }
+
+      .button__arrow {
+        background-color: transparent;
+        height: 16px;
+        width: 16px;
+        display: inline-block;
+      }
+
+      .button__arrow--left {
+        /* Edges */
+        float: right;
+      }
+
+      /*pile konkurrence start*/
+      .button {
+        /* Center the content */
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        /* Spacing */
+        padding: 8px;
+        border: none;
+        display: inline-block;
+        background-color: transparent;
+        }
+
+      .button__arrow {
+      /* Transparent background */
+        background-color: transparent;
+      /* Size */
+        height: 16px;
+        width: 16px;
+      }
+
+      .button__arrow:hover {
+        opacity: 0.5;
+      }
+
+      .button__arrow--right {
+      /* Edges */
+        border-right: 4px solid var(--darkblue);
+        border-top: 4px solid var(--darkblue);
+        transform: translateX(-25%) rotate(45deg);
+      }
+
+      .button__arrow--left {
+      /* Edges */
+        border-bottom: 4px solid var(--darkblue);
+        border-left: 4px solid var(--darkblue);
+        transform: translateX(25%) rotate(45deg);
+      }
 
   }
